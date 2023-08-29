@@ -18,6 +18,7 @@ int main() {
     LogiLedSaveCurrentLighting(); //Save current lighting
     LogiLedSetTargetDevice(LOGI_DEVICETYPE_ALL);
 
+//------Set Lighting------//
     LogiLedSetLighting(red, green, blue);
     std::this_thread::sleep_for(std::chrono::seconds(2));
 
