@@ -21,7 +21,7 @@ int main() {
 
 //------Set Lighting------//
     LogiLedSetLightingFromBitmap(bitmap);
-    std::this_thread::sleep_for(std::chrono::seconds(5));
+    std::this_thread::sleep_for(std::chrono::seconds(10));
 
     //LogiLedSetLighting(red, green, blue);
     //std::this_thread::sleep_for(std::chrono::seconds(2));
