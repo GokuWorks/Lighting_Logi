@@ -1,7 +1,7 @@
 #include <thread>
 #include <chrono>
 #include "Include\LogitechLEDLib.h"
-#include "bitmap.h"
+#include "Include\bitmap.h"
 
 int main() {
 
