@@ -1,6 +1,7 @@
 #include <thread>
 #include <chrono>
 #include "Include\LogitechLEDLib.h"
+#include "bitmap.h"
 
 int main() {
 
@@ -19,19 +20,22 @@ int main() {
     LogiLedSetTargetDevice(LOGI_DEVICETYPE_ALL);
 
 //------Set Lighting------//
-    LogiLedSetLighting(red, green, blue);
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    LogiLedSetLightingFromBitmap(bitmap);
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+
+    //LogiLedSetLighting(red, green, blue);
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     // Call per-key lighting effects
-    LogiLedSetLightingForKeyWithKeyName(LogiLed::KeyName::ARROW_DOWN, red, green, blue);
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //LogiLedSetLightingForKeyWithKeyName(LogiLed::KeyName::ARROW_DOWN, red, green, blue);
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     // effect functions
-    LogiLedFlashLighting(red, green, blue, duration, interval);
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //LogiLedFlashLighting(red, green, blue, duration, interval);
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
-    LogiLedPulseLighting(red, green, blue, duration, interval);
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //LogiLedPulseLighting(red, green, blue, duration, interval);
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
     
 //------Close Connection to Ghub------//
     LogiLedRestoreLighting();

@@ -132,6 +132,10 @@
   <ItemGroup>
     <ClCompile Include="Lighting_Logi.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitmap.h" />
+    <ClInclude Include="Include\LogitechLEDLib.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
