@@ -1,4 +1,6 @@
 #pragma once
 #include "LogitechLEDLib.h"
 
-unsigned char bitmap[LOGI_LED_BITMAP_SIZE];
+unsigned char bitmap[];
+
+void BuildBitmap();
