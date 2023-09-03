@@ -12,6 +12,8 @@ int main() {
     int duration = 2000;
     int interval = 1000;
 
+    unsigned char tes[] = {2,3,6,7};
+
 //------Init Connection to Ghub------//
     LogiLedInit(); //Needs time to initialize
     std::this_thread::sleep_for(std::chrono::seconds(2));
@@ -20,8 +22,12 @@ int main() {
     LogiLedSetTargetDevice(LOGI_DEVICETYPE_ALL);
 
 //------Set Lighting------//
-    BuildBitmap();
-    LogiLedSetLightingFromBitmap(bitmap);
+    Bitmap bMap;
+    bMap.clear();
+    bMap.set(tes, 0xff);
+    //bMap.set(2, 0xff);
+    //bMap.set(3, 0xff);
+    LogiLedSetLightingFromBitmap(bMap.get());
     std::this_thread::sleep_for(std::chrono::seconds(5));
 
     //LogiLedSetLighting(red, green, blue);
