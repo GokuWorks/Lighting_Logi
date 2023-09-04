@@ -9,6 +9,7 @@ private:
     unsigned char bitmap[LOGI_LED_BITMAP_SIZE];
 
 public:
+    Bitmap();
     void clear();
     void set(unsigned char loc, unsigned char bit);
     void set(unsigned char loc[], unsigned char bit);

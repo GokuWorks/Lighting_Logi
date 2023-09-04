@@ -21,12 +21,11 @@ int main() {
     LogiLedSaveCurrentLighting(); //Save current lighting
     LogiLedSetTargetDevice(LOGI_DEVICETYPE_ALL);
 
-//------Set Lighting------//
+//------Create Bitmap------//
     Bitmap bMap;
-    bMap.clear();
     bMap.set(tes, 0xff);
-    //bMap.set(2, 0xff);
-    //bMap.set(3, 0xff);
+
+//------Set Lighting------//
     LogiLedSetLightingFromBitmap(bMap.get());
     std::this_thread::sleep_for(std::chrono::seconds(5));
 
