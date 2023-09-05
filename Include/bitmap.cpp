@@ -17,7 +17,7 @@ void Bitmap::set(unsigned char loc, unsigned char bit) {
 }
 
 void Bitmap::set(unsigned char loc[], unsigned char bit) {
-    int size = sizeof(loc);
+    int size = sizeof(loc)/sizeof(char);
     for (int i = 0; i < size; i++) {
         bitmap[loc[i]] = bit;
     }
